@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> graph plotting </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="example 4.css">
+	<script src="example 4.js">
+	/*var parameters={
+	target:"#myFunction",
+	data:[{
+		fn:'sin(x)',
+		color:'red',
+
+	}],
+	grid:true,
+	yaxis:{domain:[-1,1]},
+	xaxis: { domain:[0,2*Math.PI] }
+
+
+};
+ 
+function plot(){
+	var color=document.querySelector('#color').value;
+	parameters.data[0].color=color;
+	var ymin=document.querySelector('#ymin').value;
+    var ymax=document.querySelector('#ymax').value;
+	parameters.yaxis.domain=[ymin,ymax]
+	var xmin= document.querySelector('#xmin').value;
+	var xmax= document.querySelector('#xmax').value;
+	parameters.xaxis.domain = [xmin,xmax]
+	var f=document.querySelector('#function').value;
+	parameters.data[0].fn=f;
+	functionPlot(parameters);
+} */
+	</script>
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js"></script>
+
+</head>
+<body onunload="plot();">
+	<h2>interactive functon plot</h2>
+	<section id="plotsetting">
+        <label for=""></label>
+		<p></p>
+		<label for="color">color:</label>value:<input type="color" id="color"  onchange="plot();">
+		<p></p>
+		<label for="ymin">ymin:</label>value:<input type="number" id="ymin" value="-1" onchange="plot();">
+		<p></p>
+		<label for="ymax">ymax:</label>value:<input type="number" id="ymax" value="1" onchange="plot();">
+		<p></p>
+		<label for="xmin" >xmin:</label>value:<input type="number" id="xmin" value="0" onchange="plot();">
+		<p></p>
+        <label for="xmax">xmax:</label>value:<input type="number" id="xmax" value="6.28" onchange="plot();">
+        <p></p>
+        <label for="function">function:</label>value:<input type="text" id="function" value="sin(x)" onchange="plot();">
+        <p></p>
+        <button onclick="plot();">plot it!!</button>
+	</section>
+	<section id="plot">
+		<div id="myFunction"></div>
+	</section>
+
+</body>
+</html>

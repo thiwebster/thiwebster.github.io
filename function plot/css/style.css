@@ -1,0 +1,23 @@
+h2{
+	border:7px solid grey;
+	text-align: center;
+	box-shadow: 5px 5px 7px violet;
+}
+section{
+	border-radius: 23px;
+	border:8px solid grey;
+	 border-radius:15px;
+     float:left;
+     height:360px;
+     padding: 50px;
+     margin:10px;
+	 box-shadow: 5px 6px 5px purple;
+
+}
+#plotSettings {
+  width:120px;
+}
+
+#plot {
+  width:550px;
+}
